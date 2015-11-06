@@ -1,0 +1,1114 @@
+2015-09-25 15:02:47 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-25 15:02:47 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\index.ftl"
+2015-09-25 19:46:55 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-25 19:47:34 ActionHandler.java ERROR /user
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.jfinal.plugin.activerecord.DbPro.find(DbPro.java:311)
+	at com.jfinal.plugin.activerecord.Db.find(Db.java:225)
+	at demo.controller.UserController.index(UserController.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:71)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1086)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3796)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3778)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4599)
+	at com.mysql.jdbc.PreparedStatement.setObject(PreparedStatement.java:4029)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_setObject(FilterChainImpl.java:2923)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_setObject(FilterAdapter.java:1298)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_setObject(FilterChainImpl.java:2920)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_setObject(FilterAdapter.java:1298)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_setObject(FilterChainImpl.java:2920)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.setObject(PreparedStatementProxyImpl.java:411)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.setObject(DruidPooledPreparedStatement.java:476)
+	at com.jfinal.plugin.activerecord.dialect.Dialect.fillStatement(Dialect.java:74)
+	at com.jfinal.plugin.activerecord.DbPro.find(DbPro.java:295)
+	at com.jfinal.plugin.activerecord.DbPro.find(DbPro.java:309)
+	... 31 more
+2015-09-25 19:49:41 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-25 19:49:42 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["user/school/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-25 19:49:42 ActionHandler.java ERROR /user
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /user/school/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /user/school/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-09-25 19:49:42 Log4JLoggerFactory.java DEBUG "user/school/index.ftl"["zh_CN",UTF-8,parsed] no source found.
+2015-09-25 19:49:42 ActionHandler.java ERROR /user
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /user/school/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /user/school/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-09-25 19:50:23 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-25 19:50:29 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["school/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-25 19:50:29 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "school/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\school\\index.ftl"
+2015-09-28 16:08:00 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:08:28 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:08:56 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["school/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 16:08:56 ActionHandler.java ERROR /user
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /school/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /school/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-09-28 16:08:59 Log4JLoggerFactory.java DEBUG "school/index.ftl"["zh_CN",UTF-8,parsed] no source found.
+2015-09-28 16:08:59 ActionHandler.java ERROR /user
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /school/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /school/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-09-28 16:17:51 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:17:55 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["school/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 16:17:55 ActionHandler.java ERROR /user
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /school/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /school/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-09-28 16:19:25 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:19:27 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/user/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 16:19:27 ActionHandler.java ERROR /user
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /WEB-INF/view/user/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /WEB-INF/view/user/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-09-28 16:19:50 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:19:55 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 16:19:55 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\school\\index.ftl"
+2015-09-28 16:35:28 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:35:34 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 16:35:34 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\school\\index.ftl"
+2015-09-28 16:37:36 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443429317844 != file lastModified=1443429449312
+2015-09-28 16:37:36 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\school\\index.ftl"
+2015-09-28 16:39:34 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443429449312 != file lastModified=1443429569495
+2015-09-28 16:39:34 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\school\\index.ftl"
+2015-09-28 16:39:36 Log4JLoggerFactory.java DEBUG "WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\school\index.ftl didn't change.
+2015-09-28 16:40:45 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443429569495 != file lastModified=1443429641148
+2015-09-28 16:40:45 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/school/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\school\\index.ftl"
+2015-09-28 16:49:06 DruidDataSource.java INFO {dataSource-1} closed
+2015-09-28 16:49:10 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:57:28 DruidDataSource.java INFO {dataSource-1} inited
+2015-09-28 16:57:58 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 16:57:58 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-09-28 16:57:59 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:04:08 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-09-28 17:04:08 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:04:11 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-09-28 17:04:12 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:04:13 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-09-28 17:04:13 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:04:20 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443430631479 != file lastModified=1443431057937
+2015-09-28 17:04:20 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-09-28 17:04:20 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:08:16 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443431057937 != file lastModified=1443431290711
+2015-09-28 17:08:16 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-09-28 17:08:17 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:09:36 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443431290711 != file lastModified=1443431369547
+2015-09-28 17:09:36 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-09-28 17:09:36 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:09:36 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-09-28 17:09:37 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:09:38 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-09-28 17:09:38 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-09-28 17:10:28 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1443431369547 != file lastModified=1443431404917
+2015-09-28 17:10:28 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-09-28 17:10:28 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-09-28 17:10:28 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-09-28 17:10:28 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-10-10 16:34:20 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-10 16:50:22 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-10 16:50:22 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-10 16:50:22 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-10 16:50:22 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-10 16:50:23 ActionHandler.java WARN 404 Action Not Found: /agent/student/list
+2015-10-10 17:24:56 DruidDataSource.java INFO {dataSource-1} closed
+2015-10-10 17:25:02 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-10 18:01:29 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-10 18:01:37 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-10 18:01:37 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-10 18:01:37 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-10 18:01:37 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-10 18:01:38 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-10 18:01:38 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-13 17:04:22 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-13 17:06:09 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-13 17:06:09 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-13 17:06:09 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-13 17:06:09 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-13 17:06:10 ActionHandler.java ERROR /agent/student/list
+java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+	at com.jfinal.plugin.activerecord.DbPro.queryInt(DbPro.java:170)
+	at com.jfinal.plugin.activerecord.Db.queryInt(Db.java:106)
+	at demo.controller.AgentStuController.list(AgentStuController.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:71)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-13 17:07:27 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-13 17:07:49 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-13 17:07:49 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-13 17:07:49 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-13 17:07:49 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-13 17:07:50 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-13 17:07:50 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 16:41:47 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-16 17:06:28 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 17:06:28 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-16 17:06:29 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 17:06:29 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-16 17:06:30 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 17:06:30 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 17:06:30 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 17:06:30 Log4JLoggerFactory.java ERROR Template processing error: "Expression list is undefined on line 189, column 10 in WEB-INF/view/agent/student.ftl."
+
+Expression list is undefined on line 189, column 10 in WEB-INF/view/agent/student.ftl.
+The problematic instruction:
+----------
+==> if-else  [on line 189, column 5 in WEB-INF/view/agent/student.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression list is undefined on line 189, column 10 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.TemplateObject.invalidTypeException(TemplateObject.java:135)
+	at freemarker.core.BuiltIn$sizeBI._getAsTemplateModel(BuiltIn.java:700)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.ComparisonExpression.isTrue(ComparisonExpression.java:111)
+	at freemarker.core.IfBlock.accept(IfBlock.java:80)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-16 17:06:30 ActionHandler.java ERROR /agent/student/list
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: Expression list is undefined on line 189, column 10 in WEB-INF/view/agent/student.ftl.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: Expression list is undefined on line 189, column 10 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.TemplateObject.invalidTypeException(TemplateObject.java:135)
+	at freemarker.core.BuiltIn$sizeBI._getAsTemplateModel(BuiltIn.java:700)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.ComparisonExpression.isTrue(ComparisonExpression.java:111)
+	at freemarker.core.IfBlock.accept(IfBlock.java:80)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	... 24 more
+2015-10-16 17:18:51 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 17:18:51 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 17:18:51 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1444986355063 != file lastModified=1444987125182
+2015-10-16 17:18:51 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 17:18:51 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 17:19:32 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 17:19:32 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 17:19:32 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1444987125182 != file lastModified=1444987170018
+2015-10-16 17:19:32 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 17:19:32 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 17:22:42 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 17:22:42 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 17:22:42 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1444987170018 != file lastModified=1444987358349
+2015-10-16 17:22:42 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 17:22:42 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 18:15:02 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 18:15:02 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 18:15:02 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1444987358349 != file lastModified=1444990494750
+2015-10-16 18:15:02 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 18:15:02 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 18:15:37 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 18:15:37 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 18:15:38 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\student.ftl didn't change.
+2015-10-16 18:15:38 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 18:16:07 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 18:16:07 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 18:16:08 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1444990494750 != file lastModified=1444990541028
+2015-10-16 18:16:08 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 18:16:08 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 18:16:33 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 18:16:33 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 18:16:33 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1444990541028 != file lastModified=1444990588954
+2015-10-16 18:16:33 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 18:16:33 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@5815d65d={public int java.util.HashMap.size()=[Ljava.lang.Class;@129314b7, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@763503e7, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@12936f52, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@d717a05, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@1501e528, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@2f6bafde, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@46e73024, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@7409afd9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@27f80b13, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@d9f20e5, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4a28a15f, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@317a8a02, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@63faa2ae, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@5bce80c9, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@52693b35, public void java.util.HashMap.clear()=[Ljava.lang.Class;@7aae3ed7, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@459fd42d}, size=public int java.util.HashMap.size(), java.lang.Object@11431d90=public java.lang.Object java.util.HashMap.get(java.lang.Object), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map), java.lang.Object@174b10a=freemarker.ext.beans.MethodMap@22fa11}
+2015-10-16 18:30:26 DruidDataSource.java INFO {dataSource-1} closed
+2015-10-16 22:33:57 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-16 22:34:07 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:34:07 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-16 22:34:07 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:34:07 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-16 22:34:08 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:34:08 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 22:34:08 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), java.lang.Object@27174693=freemarker.ext.beans.MethodMap@d7d8325, get=public java.lang.Object java.util.HashMap.get(java.lang.Object), java.lang.Object@135ef30c={public int java.util.HashMap.size()=[Ljava.lang.Class;@2b2cf90e, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@15931c47, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@6d258461, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@3a163442, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@7c0f6d9, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@d8e2489, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@6f00a552, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@1365e36d, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@636130e, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@481cff51, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@67be43d3, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@7c5706da, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@358311fc, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@3011d2d6, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@6228f841, public void java.util.HashMap.clear()=[Ljava.lang.Class;@6fc2a5bf, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@540fd7eb}, remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@49403568=public java.lang.Object java.util.HashMap.get(java.lang.Object), size=public int java.util.HashMap.size(), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map)}
+2015-10-16 22:34:51 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 22:34:51 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 22:36:08 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 22:36:08 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 22:36:08 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1445005498528 != file lastModified=1445006164487
+2015-10-16 22:36:08 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 22:36:08 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), java.lang.Object@27174693=freemarker.ext.beans.MethodMap@d7d8325, get=public java.lang.Object java.util.HashMap.get(java.lang.Object), java.lang.Object@135ef30c={public int java.util.HashMap.size()=[Ljava.lang.Class;@2b2cf90e, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@15931c47, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@6d258461, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@3a163442, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@7c0f6d9, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@d8e2489, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@6f00a552, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@1365e36d, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@636130e, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@481cff51, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@67be43d3, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@7c5706da, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@358311fc, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@3011d2d6, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@6228f841, public void java.util.HashMap.clear()=[Ljava.lang.Class;@6fc2a5bf, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@540fd7eb}, remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@49403568=public java.lang.Object java.util.HashMap.get(java.lang.Object), size=public int java.util.HashMap.size(), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map)}
+2015-10-16 22:37:13 ActionHandler.java ERROR /agent/student/add
+java.lang.RuntimeException: The Table mapping of model: demo.model.Student not exists. Please add mapping to ActiveRecordPlugin: activeRecordPlugin.addMapping(tableName, YourModel.class).
+	at com.jfinal.plugin.activerecord.TableMapping.getTable(TableMapping.java:45)
+	at com.jfinal.core.ModelInjector.injectActiveRecordModel(ModelInjector.java:83)
+	at com.jfinal.core.ModelInjector.inject(ModelInjector.java:50)
+	at com.jfinal.core.ModelInjector.inject(ModelInjector.java:37)
+	at com.jfinal.core.Controller.getModel(Controller.java:647)
+	at demo.controller.AgentStuController.add(AgentStuController.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:71)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.content(HttpConnection.java:927)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:784)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:223)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-16 22:38:28 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-16 22:42:31 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:42:31 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-16 22:42:32 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:42:32 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-16 22:42:32 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:42:32 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 22:42:32 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@43c903a4=freemarker.ext.beans.MethodMap@655a51c3, size=public int java.util.HashMap.size(), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), java.lang.Object@66492873=public java.lang.Object java.util.HashMap.get(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), java.lang.Object@115e194f={public int java.util.HashMap.size()=[Ljava.lang.Class;@cae0d31, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@76e41277, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@77787f9b, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@801d664, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@30a24357, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@6cf31db2, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@4d22c8ff, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@26ba04e9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@7e9870db, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@4a197acb, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4ecccb6e, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@673fcb2c, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@d33eaa9, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@4b730404, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@6c0cc94e, public void java.util.HashMap.clear()=[Ljava.lang.Class;@3b74574d, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@530f9eb9}, putAll=public void java.util.HashMap.putAll(java.util.Map)}
+2015-10-16 22:43:23 ActionHandler.java ERROR /agent/student/add
+com.jfinal.plugin.activerecord.ActiveRecordException: The attribute name does not exist: password
+	at com.jfinal.plugin.activerecord.Model.set(Model.java:119)
+	at demo.controller.AgentStuController.add(AgentStuController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:71)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.content(HttpConnection.java:927)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:784)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:223)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-16 22:47:23 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 22:47:23 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 22:47:23 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\student.ftl didn't change.
+2015-10-16 22:47:23 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@43c903a4=freemarker.ext.beans.MethodMap@655a51c3, size=public int java.util.HashMap.size(), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), java.lang.Object@66492873=public java.lang.Object java.util.HashMap.get(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), java.lang.Object@115e194f={public int java.util.HashMap.size()=[Ljava.lang.Class;@cae0d31, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@76e41277, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@77787f9b, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@801d664, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@30a24357, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@6cf31db2, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@4d22c8ff, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@26ba04e9, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@7e9870db, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@4a197acb, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@4ecccb6e, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@673fcb2c, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@d33eaa9, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@4b730404, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@6c0cc94e, public void java.util.HashMap.clear()=[Ljava.lang.Class;@3b74574d, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@530f9eb9}, putAll=public void java.util.HashMap.putAll(java.util.Map)}
+2015-10-16 22:48:01 ActionHandler.java ERROR /agent/student/add
+com.jfinal.plugin.activerecord.ActiveRecordException: The attribute name does not exist: password
+	at com.jfinal.plugin.activerecord.Model.set(Model.java:119)
+	at demo.controller.AgentStuController.add(AgentStuController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:71)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.content(HttpConnection.java:927)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:784)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:223)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-16 22:50:07 DruidDataSource.java INFO {dataSource-1} inited
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-10-16 22:50:14 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@65313f3e=freemarker.ext.beans.MethodMap@7c23bb8c, size=public int java.util.HashMap.size(), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), java.lang.Object@15720f24={public int java.util.HashMap.size()=[Ljava.lang.Class;@dee2400, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@d7d8325, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@2b2cf90e, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@15931c47, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@6d258461, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@3a163442, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@7c0f6d9, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@d8e2489, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@6f00a552, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@1365e36d, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@636130e, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@481cff51, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@67be43d3, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@7c5706da, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@358311fc, public void java.util.HashMap.clear()=[Ljava.lang.Class;@3011d2d6, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@6228f841}, java.lang.Object@7b2a5704=public java.lang.Object java.util.HashMap.get(java.lang.Object), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map)}
+2015-10-16 22:50:58 ActionHandler.java ERROR /agent/student/add
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: Field 'school' doesn't have a default value
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:375)
+	at demo.controller.AgentStuController.add(AgentStuController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:71)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.content(HttpConnection.java:927)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:784)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:223)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Field 'school' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1086)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2617)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2778)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2834)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2156)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2441)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2366)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2350)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2723)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_executeUpdate(WallFilter.java:621)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1069)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeUpdate(FilterEventAdapter.java:491)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2721)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:158)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:253)
+	at com.jfinal.plugin.activerecord.Model.save(Model.java:370)
+	... 30 more
+2015-10-16 22:51:54 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-10-16 22:51:54 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-10-16 22:51:54 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\student.ftl didn't change.
+2015-10-16 22:51:54 Log4JLoggerFactory.java DEBUG Key "list" was not found on instance of java.util.HashMap. Introspection information for the class is: {getClass=public final native java.lang.Class java.lang.Object.getClass(), clone=public java.lang.Object java.util.HashMap.clone(), put=public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object), get=public java.lang.Object java.util.HashMap.get(java.lang.Object), remove=public java.lang.Object java.util.HashMap.remove(java.lang.Object), equals=public boolean java.util.AbstractMap.equals(java.lang.Object), entrySet=public java.util.Set java.util.HashMap.entrySet(), hashCode=public int java.util.AbstractMap.hashCode(), class=java.beans.PropertyDescriptor[name=class; propertyType=class java.lang.Class; readMethod=public final native java.lang.Class java.lang.Object.getClass()], keySet=public java.util.Set java.util.HashMap.keySet(), java.lang.Object@65313f3e=freemarker.ext.beans.MethodMap@7c23bb8c, size=public int java.util.HashMap.size(), clear=public void java.util.HashMap.clear(), isEmpty=public boolean java.util.HashMap.isEmpty(), containsKey=public boolean java.util.HashMap.containsKey(java.lang.Object), values=public java.util.Collection java.util.HashMap.values(), java.lang.Object@15720f24={public int java.util.HashMap.size()=[Ljava.lang.Class;@dee2400, public int java.util.AbstractMap.hashCode()=[Ljava.lang.Class;@d7d8325, public final native java.lang.Class java.lang.Object.getClass()=[Ljava.lang.Class;@2b2cf90e, public java.util.Set java.util.HashMap.keySet()=[Ljava.lang.Class;@15931c47, public java.util.Set java.util.HashMap.entrySet()=[Ljava.lang.Class;@6d258461, public java.lang.Object java.util.HashMap.get(java.lang.Object)=[Ljava.lang.Class;@3a163442, public java.lang.Object java.util.HashMap.remove(java.lang.Object)=[Ljava.lang.Class;@7c0f6d9, public java.lang.Object java.util.HashMap.put(java.lang.Object,java.lang.Object)=[Ljava.lang.Class;@d8e2489, public java.lang.Object java.util.HashMap.clone()=[Ljava.lang.Class;@6f00a552, public boolean java.util.AbstractMap.equals(java.lang.Object)=[Ljava.lang.Class;@1365e36d, public java.lang.String java.util.AbstractMap.toString()=[Ljava.lang.Class;@636130e, public void java.util.HashMap.putAll(java.util.Map)=[Ljava.lang.Class;@481cff51, public boolean java.util.HashMap.containsValue(java.lang.Object)=[Ljava.lang.Class;@67be43d3, public boolean java.util.HashMap.containsKey(java.lang.Object)=[Ljava.lang.Class;@7c5706da, public java.util.Collection java.util.HashMap.values()=[Ljava.lang.Class;@358311fc, public void java.util.HashMap.clear()=[Ljava.lang.Class;@3011d2d6, public boolean java.util.HashMap.isEmpty()=[Ljava.lang.Class;@6228f841}, java.lang.Object@7b2a5704=public java.lang.Object java.util.HashMap.get(java.lang.Object), containsValue=public boolean java.util.HashMap.containsValue(java.lang.Object), empty=java.beans.PropertyDescriptor[name=empty; propertyType=boolean; readMethod=public boolean java.util.HashMap.isEmpty()], toString=public java.lang.String java.util.AbstractMap.toString(), putAll=public void java.util.HashMap.putAll(java.util.Map)}
+2015-10-16 22:52:33 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\student.ftl didn't change.
+2015-10-16 22:52:33 Log4JLoggerFactory.java ERROR Template processing error: "Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl."
+
+Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+The problematic instruction:
+----------
+==> ${s.school} [on line 196, column 13 in WEB-INF/view/agent/student.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.content(HttpConnection.java:927)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:784)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:223)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-10-16 22:52:33 ActionHandler.java ERROR /agent/student/list
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.content(HttpConnection.java:927)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:784)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:223)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	... 24 more
+2015-11-03 16:03:03 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-03 16:03:12 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 16:03:12 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-11-03 16:03:13 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 16:03:13 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-11-03 16:03:13 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 16:03:13 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-11-03 16:03:13 Log4JLoggerFactory.java ERROR Template processing error: "Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl."
+
+Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+The problematic instruction:
+----------
+==> ${s.school} [on line 196, column 13 in WEB-INF/view/agent/student.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-11-03 16:03:13 ActionHandler.java ERROR /agent/student/list
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: Expression s.school is undefined on line 196, column 15 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	... 24 more
+2015-11-03 16:05:39 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-11-03 16:05:39 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-11-03 16:05:39 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\student.ftl didn't change.
+2015-11-03 16:05:39 Log4JLoggerFactory.java ERROR Template processing error: "Expression s.addtime is undefined on line 197, column 15 in WEB-INF/view/agent/student.ftl."
+
+Expression s.addtime is undefined on line 197, column 15 in WEB-INF/view/agent/student.ftl.
+The problematic instruction:
+----------
+==> ${s.addtime} [on line 197, column 13 in WEB-INF/view/agent/student.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression s.addtime is undefined on line 197, column 15 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+2015-11-03 16:05:39 ActionHandler.java ERROR /agent/student/list
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: Expression s.addtime is undefined on line 197, column 15 in WEB-INF/view/agent/student.ftl.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: Expression s.addtime is undefined on line 197, column 15 in WEB-INF/view/agent/student.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IfBlock.accept(IfBlock.java:82)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:128)
+	... 24 more
+2015-11-03 16:06:44 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\marketAgency.ftl didn't change.
+2015-11-03 16:06:44 Log4JLoggerFactory.java DEBUG "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\jfdemo\src\main\webapp\WEB-INF\view\agent\foot.ftl didn't change.
+2015-11-03 16:06:44 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1445247529490 != file lastModified=1446537996558
+2015-11-03 16:06:44 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\jfdemo\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-11-03 17:02:31 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-03 17:02:42 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 17:02:42 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-11-03 17:02:43 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 17:02:43 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-11-03 17:02:43 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 17:02:43 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-11-03 17:34:31 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-03 17:34:51 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 17:34:51 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/marketAgency.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\agent\\marketAgency.ftl"
+2015-11-03 17:34:51 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 17:34:51 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/foot.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\agent\\foot.ftl"
+2015-11-03 17:34:51 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-03 17:34:51 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/agent/student.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\agent\\student.ftl"
+2015-11-06 16:04:54 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-06 16:05:16 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-06 16:05:16 ActionHandler.java ERROR /
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /WEB-INF/view/phone/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /WEB-INF/view/phone/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-11-06 16:05:19 Log4JLoggerFactory.java DEBUG "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed] no source found.
+2015-11-06 16:05:19 ActionHandler.java ERROR /
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template /WEB-INF/view/phone/index.ftl not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:93)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1333)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:487)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:119)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:520)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:972)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:417)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:192)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:906)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:110)
+	at org.eclipse.jetty.server.Server.handle(Server.java:350)
+	at org.eclipse.jetty.server.HttpConnection.handleRequest(HttpConnection.java:442)
+	at org.eclipse.jetty.server.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:910)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:565)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:217)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:46)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:545)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:43)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:598)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:533)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template /WEB-INF/view/phone/index.ftl not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:495)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:458)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 24 more
+2015-11-06 16:06:16 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-06 16:06:21 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed] ]
+2015-11-06 16:06:21 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.html"
+2015-11-06 16:08:35 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1446797014758 != file lastModified=1446797302575
+2015-11-06 16:08:35 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.html"
+2015-11-06 16:09:36 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1446797302575 != file lastModified=1446797369299
+2015-11-06 16:09:36 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.html"
+2015-11-06 16:10:59 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1446797369299 != file lastModified=1446797447549
+2015-11-06 16:10:59 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.html"
+2015-11-06 16:12:14 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-06 16:12:22 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed] ]
+2015-11-06 16:12:22 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.html"
+2015-11-06 16:12:23 Log4JLoggerFactory.java DEBUG "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed] using cached since E:\workspace\xjmBgSys\src\main\webapp\WEB-INF\view\phone\index.html didn't change.
+2015-11-06 16:12:23 Log4JLoggerFactory.java DEBUG "WEB-INF/view/phone/index.html"["zh_CN",UTF-8,parsed] using cached since E:\workspace\xjmBgSys\src\main\webapp\WEB-INF\view\phone\index.html didn't change.
+2015-11-06 16:19:49 DruidDataSource.java INFO {dataSource-1} inited
+2015-11-06 16:19:55 Log4JLoggerFactory.java DEBUG Could not find template in cache, creating new one; id=["WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed] ]
+2015-11-06 16:19:55 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.ftl"
+2015-11-06 16:20:29 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1446797981641 != file lastModified=1446798022828
+2015-11-06 16:20:29 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.ftl"
+2015-11-06 16:20:52 Log4JLoggerFactory.java DEBUG Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1446798022828 != file lastModified=1446798044239
+2015-11-06 16:20:52 Log4JLoggerFactory.java DEBUG Compiling FreeMarker template "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed]  from "E:\\workspace\\xjmBgSys\\src\\main\\webapp\\WEB-INF\\view\\phone\\index.ftl"
+2015-11-06 16:21:57 Log4JLoggerFactory.java DEBUG "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\xjmBgSys\src\main\webapp\WEB-INF\view\phone\index.ftl didn't change.
+2015-11-06 16:22:09 Log4JLoggerFactory.java DEBUG "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\xjmBgSys\src\main\webapp\WEB-INF\view\phone\index.ftl didn't change.
+2015-11-06 16:23:01 Log4JLoggerFactory.java DEBUG "WEB-INF/view/phone/index.ftl"["zh_CN",UTF-8,parsed] using cached since E:\workspace\xjmBgSys\src\main\webapp\WEB-INF\view\phone\index.ftl didn't change.

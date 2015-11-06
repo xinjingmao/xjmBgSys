@@ -1,0 +1,133 @@
+body{margin: 0; padding: 0;}
+a{text-decoration: none;cursor:pointer; }
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form,ul,ol,blockquote,em,i{margin:0; padding: 0;}
+img{border:0 none;vertical-align:middle}
+input,select,textarea{font-size:14px;color:#333}
+input{vertical-align:middle;padding:2px;margin:0}
+table{border-collapse:collapse;border-spacing:0}
+select,input,button,option{font:14px/20px Verdana,Simsun,Helvetica,Arial,sans-serif;}
+em,i,cite,blockquote{font-style:normal;margin:0;border: 0}
+ul,ol{list-style:none outside;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+.clear{clear: both;}
+/* -------------------------登陆页面样式---------------------------------- */
+.myhead{height: 55px; background: #44b549;  color: #fff;}
+.mh-2{text-align: center; line-height: 55px; font-size: 20px;}
+.mh-3{text-align: right; line-height: 55px; font-size: 15px!important;}
+.mh-3 a:hover,.mh-3 a:visited{color: #fff; text-decoration: none;}
+.denglu-input1{width: 100%; height: 40px; background: url("../img/d-1.gif") no-repeat 5px 4px; text-indent: 35px; background-color: #fff;}
+.denglu-input2{width: 100%; height: 40px; margin-top: 10px; background: url("../img/d-2.gif") no-repeat 5px 4px; text-indent: 35px; background-color: #fff;}
+.denglu-btn1,.denglu-btn2{width: 100%; margin-top: 10px;}
+.denglu-btn1{background: #44b549; height: 40px!important;color: #fff; font-size: 16px;}
+.denglu-btn2{display:block;background: #b2b6b2;  font-size: 16px;height: 40px!important; line-height:30px!important;color: #fff!important;}
+
+/* -------------------------修改密码页面样式---------------------------------- */
+.mh-1{line-height: 55px; font-size: 30px;}
+.mh-1 a,.mh-1 a:hover,.mh-1 a:visited{color: #fff; text-decoration: none;}
+.password-input1{margin-top: 15px; height: 40px!important;}
+.password-input1 input{height: 40px!important;}
+.password-a1{color: #000;}
+.password-a1:hover{text-decoration: none;}
+
+/* -------------------------代理我的订单页面样式---------------------------------- */
+#agent-order-shaixuan,#agent-order-shaixuan:hover,#agent-order-shaixuan:visited{color: #fff; text-decoration: none;}
+.agent-order-shaixuandiv{z-index: 3; position: absolute; background: #fff;}
+.ao-bt1{margin-top: 13px; height: 30px; width: 50px; background: #44b549; border: 0; color: #fff;}
+.ao-input1{width: 100%; height: 35px; margin-top: 10px;}
+.ao-nav{height: 40px; width: 227px; text-align: center;margin: 0 auto;}
+.ao-nav div{float: left; height: 40px;}
+.ao-nav-active{border-bottom: 3px solid #44b549; }
+.ao-nav div a{display:block;width:75px;height:24px; line-height: 24px; margin-top: 8px; color: #353535; float: left; font-size: 16px;}
+.ao-nav div a:hover{text-decoration: none;}
+.ao-content{border-top: 1px solid #dddbdb; padding-top: 10px;}
+.ao-content div  a{padding-left: 3px; padding-right: 3px; color: #000;}
+.ao-content div .aoc-a1{font-size: 18px; font-weight: bold;}
+.ao-content div .aoc-a2{border-left: 1px solid #dddbdb;border-right: 1px solid #dddbdb; font-size: 12px; color: #808184!important;}
+.ao-content div .aoc-a3{border-right: 1px solid #dddbdb;font-size: 12px; color: #808184!important;}
+.ao-content div .aoc-a4{color: #808184!important; font-size: 12px;}
+.aoc-div1,.aoc-div2,.aoc-div3{margin-top: 20px; padding-bottom: 10px;}
+.aoc-check{text-align: center; padding-bottom:10px;}
+.aoc-check a{color: #8296ef!important;}
+.aoc-check a:hover{text-decoration: none;}
+.aoc-div1{font-size: 15px; color: #808184!important;}
+.aoc-div2{font-size: 15px;}
+.aoc-div2:hover{color: #4868ea;}
+.aoc-spec{background: url("../img/abg.gif") no-repeat 0 24px;}
+.aoc-div3 a{font-size: 15px!important; padding: 0!important; margin: 0!important;}
+.aoc-div3 a:hover{color: #4868ea; text-decoration: none;}
+.aoc-div4{background: #f5f6f5; display: none;}
+.aoc-div4 div{padding-top: 10px;}
+.aoc-div4 div input{border: 0; background:#f5f6f5 ;}
+.aoc-div4 div select{border: 0; background:#f5f6f5 ;}
+.aoc-div4 .aoc-div5{padding-top: 10px; padding-bottom: 10px; border-top: 1px solid #ddd;}
+.aoc-div5-btn1{border: 3px solid #44b549; background: #44b549;color: #fff;}
+.aoc-div5-btn2{border: 3px solid #aaafaa; background: #aaafaa;color: #fff; margin-left: 5px;}
+.aoc-add{position: fixed; bottom: 0; height: 50px; width:100%;background: #faf9f9; border-top: 1px solid #ddd;}
+.aoc-add div{width: 100%;}
+.aoc-add div a{display: block;width: 100%; line-height: 50px; text-align: center; font-size: 18px; color: #fd0505;}
+.aoc-add div a:hover{text-decoration: none;}
+/* -------------------------代理添加订单样式---------------------------------- */
+.aac-btn1{display:block;width: 60px; height: 35px; border: 0; background:#44b549 ; color: #fff; float: left;}
+.aac-btn2{display: block;width: 60px; height: 35px; line-height: 35px; text-align: center; background:#aaafaa; color: #fff; float: left; margin-left: 10px;}
+.aa-select{height: 40px;}
+.bb-select{height: 40px; width: 33.33%!important; box-shadow: none;}
+/* -------------------------代理培训资料页面样式---------------------------------- */
+.ad-content{padding-top:8px; padding-bottom: 8px; border-top: 1px solid #ddd;}
+.ad-content div:nth-child(2){border-right: 1px solid #ddd;border-left: 1px solid #ddd;}
+.ad-content div:nth-child(1){font-size: 16px; font-weight: bold;}
+.ad-content div:nth-child(1) span{font-size: 14px; font-weight: 400; color: #8a8a8c;}
+.ad-content div:nth-child(2){font-size: 14px; font-weight: 400; color: #8a8a8c;}
+.ad-content div:nth-child(3){text-align: center;}
+.ad-content div:nth-child(3) a:hover{text-decoration: none;}
+.ad-content:last-child{border-bottom: 1px solid #ddd; margin-bottom: 40px;}
+/* -------------------------代理培训资料查看详情页面样式---------------------------------- */
+.add-content div:nth-child(1){text-align: center; font-size: 15px; font-weight: bold; padding-top: 10px; padding-bottom: 10px;}
+.add-content div:nth-child(2){text-align: left; color: #9a9a9b;}
+.add-content div:nth-child(3){text-align: right; color: #9a9a9b;}
+.add-content div:nth-child(4){padding-top: 25px; font-size: 15px; padding-bottom: 25px;}
+.add-content div:nth-child(4) p{text-indent: 2em; line-height: 25px;}
+/* -------------------------代理代理支持页面样式---------------------------------- */
+.as-content{border-top: 1px solid #ddd;}
+.as-content:last-child{border-bottom: 1px solid #ddd;}
+.as-content div:nth-child(1){font-size: 16px; font-weight: bold; line-height: 50px;color: #000;}
+.as-content div:nth-child(2){ text-align: right; line-height: 50px; color: #8a8a8c;}
+
+/* -------------------------学生个人资料页面样式---------------------------------- */
+.sd-div{margin-top: 20px;  margin-bottom:20px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;
+height: 45px; text-align: center; line-height: 45px; font-size: 16px; color: #fe0528;}
+.sa-nav{text-align: center; font-size: 16px; height: 50px; line-height: 50px; color: #000;}
+.sa-nav:hover,.sa-nav-actived{border-bottom: 3px solid #44b549;}
+#sa-nav{height: 50px; border-bottom: 1px solid #ddd;}
+.sa-nav:nth-child(1){border-right: 1px solid #ddd;}
+.add-content1{line-height: 30px; background: #faf0e1; padding-top: 10px; padding-bottom: 10px;}
+.add-content2{padding-top: 10px; line-height: 30px;}
+.add-content2 p{text-indent: 2em;}
+/* -------------------------学生考证进度页面样式---------------------------------- */
+.sp-content1{padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #ddd; line-height: 25px;
+font-size: 15px; font-weight: bold;}
+.sp-content1 span{font-weight: 400; font-size: 14px; color: #a4a4a3;}
+.sp-content1 p{font-size: 13px;  font-weight: 400;  color: #a4a4a3;}
+.sp-content1 p span{padding-left: 15px;}
+.sp-content2{line-height: 50px;padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #ddd;
+    font-size: 15px; font-weight: bold;}
+.sp-img{margin-top:21px;}
+.sp-item{font-size: 16px; font-weight: bold; text-align:left;width: 100%; border: 0; line-height: 50px;
+background: url("../img/top.jpg") no-repeat 90% 0; }
+.sp-item-date{display: none;}
+.sp-item-date{margin-bottom: 20px;}
+.sp-li{margin-top: 10px; background: #efefef ; }
+.sp-item-active{background: url("../img/bottom.jpg") no-repeat 90% 0!important;}
+
+.sd2-li{margin-top: 10px; margin-bottom: 10px; background: #fff; border-bottom: 1px solid #bdbdbd; }
+/* -------------------------项目经理代理管理跟进页面样式---------------------------------- */
+.follow1-item{margin-top: 10px; padding-bottom: 10px; padding-top: 10px; border-bottom: 1px solid #ddd;}
+.PM-follow-biaodan form{border: 1px solid #bbb; padding-top: 5px; padding-bottom: 10px;}
+.PM-follow-biaodan form textarea{margin-bottom:-10px; border: 0;}
+/* -------------------------项目经理我的订单页面样式---------------------------------- */
+.PM-o-li{padding-bottom: 10px; padding-top: 10px; margin-top: 10px!important; background: #fff; border-bottom: 1px solid #ddd; border-top: 0;}
+/* -------------------------项目经理我的订单详情页面样式---------------------------------- */
+.PM-oi{margin-top: 10px; background: #fff; padding-top: 10px; border-bottom: 1px #ccc solid;}
+.PM-oi-btn{margin-top: 20px; margin-bottom: 20px; text-align: center;}
+.PM-oi-add{margin-top: 40px;}
+.PM-oi-add div a{width:100%;margin-top: 20px; background: #44b549; color: #fff; margin-bottom: 40px;}
+#localImag,#localImag1,#localImag2,#localImag3{background: url("../img/picbg.jpg");}
